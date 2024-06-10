@@ -39,7 +39,7 @@ Aplicación web para crear, leer y eliminar posts que contienen nombre y descrip
 Una vez clonado el repositorio:
 
 1. En PostgreSQL, crear una base de datos llamada "posts_app".
-2. En PostgreSQL, agregar un usuario que pueda iniciar sesión y crear bases de datos, y que tenga al menos permiso CREATE para la base de datos "posts_app".
+2. En PostgreSQL, agregar un usuario que pueda iniciar sesión y crear bases de datos, y que tenga al menos el privilegio CREATE para la base de datos "posts_app".
 3. En el directorio "backend", renombrar el archivo ".env.example" a ".env".
 4. En el archivo ".env", en el string de conexión "DATABASE_URL", escribir las credenciales del usuario agregado en el paso 2 (usuario y contraseña).
 5. En el directorio "backend", ejecutar el comando "npm install".
