@@ -3,12 +3,12 @@ import axios from 'axios';
 
 const apiUrl = 'http://localhost:5000/api/posts';
 
-export const fetchData = createAsyncThunk('data/fetchData', async () => {
+export const getPosts = createAsyncThunk('data/getPosts', async () => {
   try {
     const response = await axios.get(apiUrl);
     return response.data;
   } catch (error) {
-    throw Error('Failed to fetch data');
+    throw Error('Failed to get posts');
   }
 });
 
@@ -41,17 +41,17 @@ const dataSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchData.pending, (state) => {
+    builder.addCase(getPosts.pending, (state) => {
       state.loading = true;
       state.error = null;
     });
 
-    builder.addCase(fetchData.fulfilled, (state, action) => {
+    builder.addCase(getPosts.fulfilled, (state, action) => {
       state.loading = false;
       state.data = action.payload;
     });
 
-    builder.addCase(fetchData.rejected, (state, action) => {
+    builder.addCase(getPosts.rejected, (state, action) => {
       state.loading = false;
       state.error = action.error.message;
     });

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchData, addPost, deletePost } from '../store/dataSlice';
+import { getPosts, addPost, deletePost } from '../store/dataSlice';
 import './App.css';
 
 const App = () => {
@@ -13,9 +13,13 @@ const App = () => {
   const [description, setDescription] = useState('');
   const [message, setMessage] = useState('');
 
+  // Get posts on startup
+
   useEffect(() => {
-    dispatch(fetchData());
+    dispatch(getPosts());
   }, [dispatch]);
+
+  // Filter
 
   useEffect(() => {
     if (!filterText) {
@@ -40,6 +44,8 @@ const App = () => {
     setTempFilterText('');
   };
 
+  // Messages
+
   let timeoutId;
   
   const showMessage = (msg) => {
@@ -52,6 +58,8 @@ const App = () => {
     }, 2000);
   };
 
+  // Delete
+
   const handleDeleteButtonClick = async (id) => {
     showMessage('Borrando post...');
     try {
@@ -61,6 +69,8 @@ const App = () => {
       showMessage('Post no pudo ser borrado.');
     }
   };
+
+  // Create
 
   const handleNameChange = (event) => {
     setName(event.target.value);
