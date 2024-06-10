@@ -96,7 +96,7 @@ const App = () => {
     try {
       await dispatch(addPost(newPost));
       if (filterText.length > 0) {
-        showMessage('Post creado exitosamente (filtro impide verlo).');
+        showMessage('Post creado exitosamente (atención: filtro activo).');
       } else {
         showMessage('Post creado exitosamente.');
       }

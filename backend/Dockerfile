@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy package.json and package-lock.json to the container
 COPY package*.json ./
 
-# Remove the existing node_modules directory
+# Remove the existing node_modules directory (just in case)
 RUN rm -rf node_modules
 
 # Install dependencies
