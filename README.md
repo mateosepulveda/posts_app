@@ -24,7 +24,7 @@ Aplicación web para crear, leer y eliminar posts que contienen nombre y descrip
 
 ### Herramientas auxiliares
 
-- wait-for-it (https://github.com/vishnubob/wait-for-it) (para Docker)
+- wait-for-it (https://github.com/vishnubob/wait-for-it)
 
 ## Instrucciones para levantar ambiente de desarrollo localmente
 
