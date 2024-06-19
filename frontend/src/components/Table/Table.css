@@ -1,0 +1,41 @@
+.post-table-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 5px 0;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-style: solid;
+    border-color: rgb(8, 85, 116);
+}
+  
+thead {
+    background-color: skyblue;
+}
+  
+tbody tr:nth-child(odd) {
+    background-color: rgb(204, 219, 226);
+}
+
+td.no-data {
+    text-align: center;
+}
+
+td.word-break {
+    word-break: break-all;
+}
+
+.delete-button {
+    padding: 0;
+    background-color: transparent;
+    border-style: none;
+    box-shadow: none;
+}
+  
+.delete-button:hover {
+    cursor: pointer;
+    color: rgb(4, 41, 56);
+    text-decoration: underline;
+}

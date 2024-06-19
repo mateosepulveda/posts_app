@@ -54,9 +54,8 @@ Una vez clonado el repositorio:
 Una vez clonado el repositorio:
 
 1. En el directorio "backend", renombrar el archivo ".env.example" a ".env".
-2. En el archivo ".env", en el string de conexión "DATABASE_URL", cambiar la palabra "localhost" por "database".
-3. En el directorio raíz del proyecto, ejecutar el comando "docker compose up --build".
-4. Mediante el navegador de internet, acceder a http://localhost:3000/ para usar la aplicación.
+2. En el directorio raíz del proyecto, ejecutar el comando "docker compose up --build".
+3. Mediante el navegador de internet, acceder a http://localhost:3000/ para usar la aplicación.
 
 ## Información adicional
 

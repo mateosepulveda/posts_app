@@ -1,0 +1,13 @@
+.create-post-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 5px 0;
+}
+
+.input-container {
+    text-align: left;
+}
+
+.name-textbox {
+    margin-right: 5px;
+}

@@ -1,0 +1,13 @@
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 5px 0;
+}
+
+.button-container {
+    text-align: right;
+}
+  
+.remove-filter-button{
+    margin-left: 5px;
+}

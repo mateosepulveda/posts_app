@@ -32,7 +32,6 @@ export const deletePost = createAsyncThunk('data/deletePost', async (postId) => 
 
 const initialState = {
   data: [],
-  loading: false,
   error: null,
 };
 
@@ -42,47 +41,38 @@ const dataSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getPosts.pending, (state) => {
-      state.loading = true;
       state.error = null;
     });
 
     builder.addCase(getPosts.fulfilled, (state, action) => {
-      state.loading = false;
       state.data = action.payload;
     });
 
     builder.addCase(getPosts.rejected, (state, action) => {
-      state.loading = false;
       state.error = action.error.message;
     });
 
     builder.addCase(addPost.pending, (state) => {
-      state.loading = true;
       state.error = null;
     });
 
     builder.addCase(addPost.fulfilled, (state, action) => {
-      state.loading = false;
       state.data.push(action.payload);
     });
 
     builder.addCase(addPost.rejected, (state, action) => {
-      state.loading = false;
       state.error = action.error.message;
     });
 
     builder.addCase(deletePost.pending, (state) => {
-      state.loading = true;
       state.error = null;
     })
     
     builder.addCase(deletePost.fulfilled, (state, action) => {
-      state.loading = false;
       state.data = state.data.filter((post) => post.id !== action.payload);
     })
 
     builder.addCase(deletePost.rejected, (state, action) => {
-      state.loading = false;
       state.error = action.error.message;
     });
   },
